@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 /* Set height of body and the document to 100% */
@@ -11,6 +13,15 @@ body, html {
   font-family: 'Cinzel', serif;
 
 }
+
+
+
+.responsive {
+  width: 50%;
+  height: auto;
+
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -19,14 +30,29 @@ body, html {
   position: absolute;
   top: 10%;
   left: 50%;
+
 }
 
 .images {
-  height:300px;
+
+
   object-fit:none;
   display:block;
   margin:0 auto;
+  width: 100%;
+
+
 }
+
+img.alldevices {
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+border: none;
+    display: block;
+           padding: 5px 0;
+}
+
 
 .price {
   height:400px;
@@ -69,18 +95,20 @@ body, html {
 }
 
 #Home {background: url(Kay/bamboo.jpg);
-      background-repeat: no-repeat;
-      background-size:cover;
+  background-repeat: no-repeat;
+  background-size:cover;
+
 
         }
 #Pricing {background: url(Kay/bamboo.jpg) ;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size:cover;
 
     }
-#Contact {background: url(Kay/bamboo.jpg);
+#Contact{background: url(Kay/bamboo.jpg);
   background-repeat: no-repeat;
   background-size:cover;}
+
 #About {background: url(Kay/bamboo.jpg);
   background-repeat: no-repeat;
   background-size:cover;}
@@ -93,14 +121,15 @@ body, html {
   <button class="tablink" onclick="openPage('About', this)">About</button>
   <div id="Home" class="tabcontent">
     <div class="container">
-      <img src="Kay/brown.jpg" alt="brown">
+      <img src="Kay/brown.jpg" alt="brown" class="alldevices"  max-height:200px; max-width:200px; >
       <div class="centered">   <font color="black" style ="font-family: 'Cinzel', serif;">
         <center> <b>  <p><font size="10" color="black" style="font-family: 'Cinzel', serif;">
            Welcome to Kay Foot Spa </font> </p>  </b> </center>
+          <h1> Gift Certificates available! </h1>
         <center> <h1>Hours: Mon-Sun 10 AM-9 PM</h1> </center>
         <center> <h1>671 Waukegan Rd, Deerfield IL 60015</h1> </center>
         <center> <h1>Tel: 312-593-3466</h1> </center>
-        <img src="Kay/rocks.jpg" class="images">
+        <img src="Kay/rocks.jpg" class="responsive" >
 
       </div>
 
@@ -145,7 +174,7 @@ function openPage(pageName,elmnt,color) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+    tablinks[i].style.backgroundColor = "black";
   }
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
