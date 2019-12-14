@@ -25,11 +25,16 @@ body, html {
 .container {
   position: relative;
   text-align: center;
+  margin: 0 auto;
 }
 .centered {
-  position: absolute;
-  top: 10%;
-  left: 50%;
+  font-size: 100%;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 
 }
 
@@ -46,7 +51,7 @@ body, html {
 
 img.alldevices {
   margin: 0 auto;
-  height: auto;
+  height: 100%;
   max-width: 100%;
 border: none;
     display: block;
@@ -55,18 +60,18 @@ border: none;
 
 
 .price {
-  height:400px;
-
-  display:block;
   margin:0 auto;
-  float: left;
+  height:30%;
+ display:block;
+ margin:0 auto;
+ float: left
 }
 .special {
-  height:400px;
-
-  display:block;
   margin:0 auto;
-  float: left;
+  max-height:30%;
+ display:block;
+ margin:0 auto;
+ float: left
 
 }
 /* Style tab links */
@@ -125,7 +130,7 @@ border: none;
       <div class="centered">   <font color="black" style ="font-family: 'Cinzel', serif;">
         <center> <b>  <p><font size="10" color="black" style="font-family: 'Cinzel', serif;">
            Welcome to Kay Foot Spa </font> </p>  </b> </center>
-          <h1> Gift Certificates available! </h1>
+          <h1> <font color="red"> Gift Certificates available! </font> </h1>
         <center> <h1>Hours: Mon-Sun 10 AM-9 PM</h1> </center>
         <center> <h1>671 Waukegan Rd, Deerfield IL 60015</h1> </center>
         <center> <h1>Tel: 312-593-3466</h1> </center>
